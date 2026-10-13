@@ -449,6 +449,7 @@ class ALttPRWorld(World):
         self.door_rando_world.experimental = {
             1: False}  # This makes you a bunny if your spawn point is in the dark world
         self.door_rando_world.flute_mode = {1: "active" if self.options.pre_activated_flute.value else "normal"}
+        self.door_rando_world.free_lamp_cone = {1: self.options.free_lamp_cone.value}
         self.door_rando_world.intensity = {1: 2 if not self.options.lobby_shuffle.value else 3}  # No door shuffle
         self.door_rando_world.keyshuffle = {1: "none" if not self.options.small_key_shuffle.value else "wild"}
         self.door_rando_world.linked_drops = {1: "independent" if self.options.decouple_dropdowns else "unset"}  # In entrance shuffle, whether dropdowns link with their matching exit is determined by the entrance setting

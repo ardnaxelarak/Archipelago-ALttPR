@@ -131,6 +131,11 @@ This is the current slot data for the APWorld. Several fields use different name
             'boss_shuffle': 'none',
 
             /*
+             * Free Lamp Cone
+             * Values: 0 for vanilla, 1 to always see in the dark
+            'free_lamp_cone': 0,
+
+            /*
              * Entrance Shuffle
              * Values: 'vanilla', 'dungeonssimple', 'dungeonsfull', and 'crossed'
              */
@@ -149,10 +154,15 @@ This is the current slot data for the APWorld. Several fields use different name
             'shufflelinks': 0,
 
             /*
-             * Zelgawoods
-             * Values: 'followlinked' to enable with crossed entrance shuffle, 'original' for no Zelgawoods
+             * Shuffle Skull Woods
+             * Values: 'followlinked' to enable with crossed entrance shuffle, 'original' to not shuffle Skull Woods (except the back and moving dropdowns around)
              */
             'skullwoods': 'original',
+
+            /*
+             * Decoupled Dropdowns
+             * Values: 'unset' to place dropdown exits next to the dropdown, 'independent' to make dropdown exits randomized anywhere.
+            'linked_drops': 'unset',
 
             /*
              * Door Shuffle

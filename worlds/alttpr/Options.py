@@ -264,6 +264,12 @@ def boss_shuffle_string_from_option(option):
         raise Exception(f"Invalid option {option} for boss_shuffle")
 
 
+class FreeLampCone(Toggle):
+    """See in the dark without the Lamp."""
+    display_name = "Free Lamp Cone"
+    default = False
+
+
 class BomblessStart(Toggle):
     """Start without the ability to use bombs. Two bomb capacity upgrades are added to the item pool and will give the ability to use bombs."""
     display_name = "Bombless Start"
@@ -527,6 +533,7 @@ class ALttPROptions(PerGameCommonOptions):
     boss_shuffle: BossShuffle
     bombless_start: BomblessStart
     swordless: Swordless
+    free_lamp_cone: FreeLampCone
     shopsanity: Shopsanity
     prize_shuffle: PrizeShuffle
     flute_shuffle: FluteShuffle
@@ -589,6 +596,7 @@ alttpr_option_groups: list[OptionGroup] = [
             FluteShuffle,
             EnemyShuffle,
             BossShuffle,
+            FreeLampCone,
         ],
     ),
     OptionGroup(
