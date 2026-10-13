@@ -212,10 +212,14 @@ class LobbyShuffle(Toggle):
 class DoorTypeShuffle(Choice):
     """With door shuffle enabled, randomize the types of each door.
     original: All dungeon doors which are open, bombable, bonkable, or small key locked become a random type of door.
-    big: Doors that are big key locked are also randomized."""
+    big: Doors that are big key locked are also randomized.
+    all: One-way trap doors are also randomized.
+    chaos: All doors and the number of each type of door is randomized."""
     display_name = "Door Type Shuffle"
     option_original = 0
     option_big = 1
+    option_all = 2
+    option_chaos = 3
     default = "original"
 
 
