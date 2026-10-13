@@ -154,12 +154,27 @@ class ShuffleTavern(Toggle):
     default = False
 
 
-class Zelgawoods(Toggle):
+class ShuffleSkullWoods(Toggle):
     """If entrance shuffle is enabled, add Skull Woods entrances and dropdowns to the entrance shuffle. The main Skull Woods entrance/big chest
+    dropdown and the second Skull Woods entrance/the dropdown in the back are both added to the dropdown pool. At least one of the entrances in
+    the back of the Skull Woods area must be a connector, and without decoupled entrances, the other two dropdowns in the front are vanilla."""
+    display_name = "Shuffle Skull Woods"
+    default = False
+
+
+class Zelgawoods(Toggle):
+    """If crossed entrance shuffle is enabled, add Skull Woods entrances and dropdowns to the entrance shuffle. The main Skull Woods entrance/big chest
     dropdown and the second Skull Woods entrance/the dropdown in the back are both added to the dropdown pool. The other two dropdowns in the
     front are vanilla, and at least one of the entrances in the back of the Skull Woods area must be a connector."""
-    # TODO: If I have a good link to the image description a picture is better than text descriptions
     display_name = "Zelgawoods"
+    default = False
+    visibility = Visibility.none
+
+
+class DecoupleDropdowns(Toggle):
+    """If crossed entrance shuffle is enabled, dropdowns no longer connect to their nearby exit, and could lead to anywhere in the game world."""
+    display_name = "Decouple Dropdowns"
+    default = False
 
 
 class DoorShuffle(Choice):
@@ -502,7 +517,9 @@ class ALttPROptions(PerGameCommonOptions):
     entrance_shuffle: EntranceShuffle
     shuffle_links_house: ShuffleLinksHouse
     shuffle_tavern: ShuffleTavern
+    shuffle_skull_woods: ShuffleSkullWoods
     zelgawoods: Zelgawoods
+    decouple_dropdowns: DecoupleDropdowns
     door_shuffle: DoorShuffle
     lobby_shuffle: LobbyShuffle
     door_type_shuffle: DoorTypeShuffle
@@ -581,6 +598,8 @@ alttpr_option_groups: list[OptionGroup] = [
           Zelgawoods,
           ShuffleLinksHouse,
           ShuffleTavern,
+          ShuffleSkullWoods,
+          DecoupleDropdowns,
       ]
     ),
     OptionGroup(

@@ -35,7 +35,7 @@ The setup for this APWorld is largely identical to the [setup guide for the exis
 * Some checks aren't sent until you leave their room
 * Triforce Pieces and Small Keys can't be in the starting inventory,
 * The spoiler log shows a lot of events that should be hidden
-* Door rando does not work with standard mode, no keysanity, or no key drop
+* Door rando does not work with standard mode or no key drop
 * Universal Tracker does not work with logical enemy shuffle, and has key logic errors or sometimes fails to connect for door rando
 
 ## Developer installation:
@@ -45,3 +45,5 @@ The setup for this APWorld is largely identical to the [setup guide for the exis
 The code for this APWorld is in worlds/alttpr, with the main ALttPRWorld class in World.py. Almost all of the actual randomizing is done in ALttPDoorRandomizer, a submodule containing an edited copy of the standalone OWR (most of the edits are to make the imports relative so it will compile inside AP). The code written for this APWorld is playing middleman; setting up OWR with the YAML settings, converting OWR items and locations to AP objects, telling OWR where AP has placed each item, and so on.
 
 There is one helper script added; with one ALttP YAML and other optional YAMLs in the Players folder, you can go to "worlds/alttpr" and run "generate_and_launch.py" as a shortcut to delete the output folder, generate a new multiworld, start a local server, and launch ALttP.
+
+The baserom code is located at https://github.com/aurabot24/z3randomizer.

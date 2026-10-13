@@ -451,8 +451,7 @@ class ALttPRWorld(World):
         self.door_rando_world.flute_mode = {1: "active" if self.options.pre_activated_flute.value else "normal"}
         self.door_rando_world.intensity = {1: 2 if not self.options.lobby_shuffle.value else 3}  # No door shuffle
         self.door_rando_world.keyshuffle = {1: "none" if not self.options.small_key_shuffle.value else "wild"}
-        self.door_rando_world.linked_drops = {
-            1: "unset"}  # In entrance shuffle, whether dropdowns link with their matching exit is determined by the entrance setting
+        self.door_rando_world.linked_drops = {1: "independent" if self.options.decouple_dropdowns else "unset"}  # In entrance shuffle, whether dropdowns link with their matching exit is determined by the entrance setting
         self.door_rando_world.lock_aga_door_in_escape = True
         self.door_rando_world.mapshuffle = {1: "wild" if self.options.map_shuffle.value else "none"}
         self.door_rando_world.mirrorscroll = {1: self.options.mirror_scroll.value or shuffled_doors}
@@ -475,7 +474,7 @@ class ALttPRWorld(World):
         self.door_rando_world.shufflelinks = {1: self.options.shuffle_links_house.value}
         self.door_rando_world.shuffletavern = {1: self.options.shuffle_tavern.value}
         self.door_rando_world.skullwoods = {
-            1: "followlinked" if self.options.zelgawoods.value else "original"}  # How to handle Skull Woods in entrance shuffle.
+            1: "followlinked" if self.options.shuffle_skull_woods or self.options.zelgawoods else "original"}  # How to handle Skull Woods in entrance shuffle.
         self.door_rando_world.trap_door_mode = {1: "vanilla"}
         self.door_rando_world.treasure_hunt_count = {1: self.options.triforce_hunt_goal.value}
         self.door_rando_world.treasure_hunt_total = {1: self.options.triforce_hunt_total.value}
