@@ -285,16 +285,12 @@ class ALttPRWorld(World):
                         trap_classification = self.random.choice([ItemClassification.progression, ItemClassification.useful, ItemClassification.filler])
 
                 # Using the green/blue/red clocks as placeholders for AP items.
-                # TODO: Edit the base ROM to add AP items and matching sprites
                 if location.item.classification & ItemClassification.progression or trap_classification == ItemClassification.progression:
-                    dr_item = ItemFactory("Green Clock", 1)
-                    dr_item.price = 100
+                    dr_item = ItemFactory("Progression AP Item", 1)
                 elif location.item.classification & ItemClassification.useful or trap_classification == ItemClassification.useful:
-                    dr_item = ItemFactory("Blue Clock", 1)
-                    dr_item.price = 50
+                    dr_item = ItemFactory("Useful AP Item", 1)
                 else:
-                    dr_item = ItemFactory("Red Clock", 1)
-                    dr_item.price = 20
+                    dr_item = ItemFactory("Filler AP Item", 1)
 
                 self.set_hint_and_credits_text(dr_item, location.item)
 

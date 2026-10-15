@@ -123,6 +123,7 @@ def patch_base_rom(buffer):
     patchedmd5 = hashlib.md5()
     patchedmd5.update(buffer)
     if RANDOMIZERBASEHASH != patchedmd5.hexdigest():
+        print(f"Hash {patchedmd5.hexdigest()} did not match")
         raise RuntimeError('Provided Base Rom unsuitable for patching. Please provide a JAP(1.0) "Zelda no Densetsu - Kamigami no Triforce (Japan).sfc" rom to use as a base.')
 
     return buffer
