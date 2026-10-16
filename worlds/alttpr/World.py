@@ -314,7 +314,7 @@ class ALttPRWorld(World):
             hint_text["Progressive Bow"] = " and ".join(bow_location_names)
 
         # Create a ROM patch
-        rom = ALttPRRom(self.player, self.player_name, self.seed_hash, self.options.sprite.value)
+        rom = ALttPRRom(self.player, self.player_name, self.seed_hash, self.options.sprite.value if not self.options.local_sprite else "local")
         try:
             patch_rom(self.door_rando_world, rom, 1, 1, is_mystery=False, hint_text=hint_text)
         except RuntimeError as e:

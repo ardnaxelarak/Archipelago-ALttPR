@@ -403,6 +403,12 @@ class Sprite(FreeText):
     default = "Link"
 
 
+class LocalSprite(Toggle):
+    """Load a Link sprite from a local file upon running the patch."""
+    display_name = "Local Sprite"
+    default = False
+
+
 class Quickswap(Toggle):
     """Swap equipped items with the L and R buttons."""
     display_name = "Quickswap"
@@ -550,6 +556,7 @@ class ALttPROptions(PerGameCommonOptions):
     dungeon_counters: DungeonCounters
     trap_appearance: TrapAppearance
     sprite: Sprite
+    local_sprite: LocalSprite
     quickswap: Quickswap
     heart_beep_rate: HeartBeepRate
     heart_color: HeartColor
@@ -631,6 +638,8 @@ alttpr_option_groups: list[OptionGroup] = [
             DungeonCounters,
             TrapAppearance,
             Sprite,
+            LocalSprite,
+            Quickswap,
             HeartBeepRate,
             HeartColor,
             FastMenu,
