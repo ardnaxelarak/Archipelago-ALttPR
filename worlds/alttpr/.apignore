@@ -1,4 +1,6 @@
 *.sfc
+/.idea
+/.vscode
 /docs
 /test
 /ALttPDoorRandomizer/data/itemgfx
