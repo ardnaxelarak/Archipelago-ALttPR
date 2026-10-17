@@ -171,10 +171,10 @@ class Zelgawoods(Toggle):
     visibility = Visibility.none
 
 
-class DecoupleDropdowns(Toggle):
-    """If crossed entrance shuffle is enabled, dropdowns no longer connect to their nearby exit, and could lead to anywhere in the game world."""
-    display_name = "Decouple Dropdowns"
-    default = False
+class LinkedDrops(Toggle):
+    """Dropdowns are linked to their nearby exit. When disabled and crossed entrance shuffle is enabled, dropdowns could lead to anywhere in the game world."""
+    display_name = "Linked Drops"
+    default = True
 
 
 class DoorShuffle(Choice):
@@ -268,9 +268,9 @@ def boss_shuffle_string_from_option(option):
         raise Exception(f"Invalid option {option} for boss_shuffle")
 
 
-class FreeLampCone(Toggle):
+class Pseudolamp(Toggle):
     """See in the dark without the Lamp."""
-    display_name = "Free Lamp Cone"
+    display_name = "Pseudolamp"
     default = False
 
 
@@ -535,7 +535,7 @@ class ALttPROptions(PerGameCommonOptions):
     shuffle_tavern: ShuffleTavern
     shuffle_skull_woods: ShuffleSkullWoods
     zelgawoods: Zelgawoods
-    decouple_dropdowns: DecoupleDropdowns
+    linked_drops: LinkedDrops
     door_shuffle: DoorShuffle
     lobby_shuffle: LobbyShuffle
     door_type_shuffle: DoorTypeShuffle
@@ -543,7 +543,7 @@ class ALttPROptions(PerGameCommonOptions):
     boss_shuffle: BossShuffle
     bombless_start: BomblessStart
     swordless: Swordless
-    free_lamp_cone: FreeLampCone
+    pseudolamp: Pseudolamp
     shopsanity: Shopsanity
     prize_shuffle: PrizeShuffle
     flute_shuffle: FluteShuffle
@@ -607,7 +607,7 @@ alttpr_option_groups: list[OptionGroup] = [
             FluteShuffle,
             EnemyShuffle,
             BossShuffle,
-            FreeLampCone,
+            Pseudolamp,
         ],
     ),
     OptionGroup(
@@ -618,7 +618,7 @@ alttpr_option_groups: list[OptionGroup] = [
           ShuffleLinksHouse,
           ShuffleTavern,
           ShuffleSkullWoods,
-          DecoupleDropdowns,
+          LinkedDrops,
       ]
     ),
     OptionGroup(
