@@ -625,6 +625,7 @@ class ALttPRWorld(World):
             "Chicken",
             "Fairy",
             "Fighter Sword",
+            "Filler AP Item",
             "Golden Sword",
             "Good Bee",
             "Green Clock",
@@ -632,6 +633,7 @@ class ALttPRWorld(World):
             "Master Sword",
             "Multi RNG",
             "Nothing",
+            "Progression AP Item",
             "Power Glove",
             "Power Star",
             "Red Clock",
@@ -643,6 +645,7 @@ class ALttPRWorld(World):
             "Tempered Sword",
             "Titans Mitts",
             "Triforce Piece",
+            "Useful AP Item",
         ]
         always_invalid_starting_items.extend([item for item in Items.progressive_items if item.startswith("Small Key")])
         errors = []
