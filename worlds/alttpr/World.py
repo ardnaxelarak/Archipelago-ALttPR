@@ -284,7 +284,6 @@ class ALttPRWorld(World):
                     else:
                         trap_classification = self.random.choice([ItemClassification.progression, ItemClassification.useful, ItemClassification.filler])
 
-                # Using the green/blue/red clocks as placeholders for AP items.
                 if location.item.classification & ItemClassification.progression or trap_classification == ItemClassification.progression:
                     dr_item = ItemFactory("Progression AP Item", 1)
                 elif location.item.classification & ItemClassification.useful or trap_classification == ItemClassification.useful:
