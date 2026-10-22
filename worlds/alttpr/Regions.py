@@ -552,6 +552,10 @@ def init_lookups():
             if sprite.sub_type == 0x07:  # overlord
                 index_adj += 1
                 continue
+            elif not sprite.region:
+                # These are all non-enemy sprites, like pull switches, NPCs, and bosses
+                continue
+
             if (super_tile, index) in key_drop_data:
                 loc_name = key_drop_data[(super_tile, index)]
                 location_id = PotShuffle.key_drop_data[loc_name][1][0]
