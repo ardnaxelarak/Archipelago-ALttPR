@@ -41,7 +41,7 @@ Open edges, like every exit from the Desert Palace lobby. These connect to a ran
 Not a real door, but included for logic, e.g. Hyrule Castle Cellblock Door. Never randomized.
 
 ## Non-implemented options
-These are options available in OWR, but not implemented in AP. In general I don't plan to add these, but I thought I'd mention them for completion's sake.
+These are options available in OWR, but not implemented in AP. In general I don't plan to add these, but thought they were worth mentioning.
 
 * Decoupled doors. Probably the most likely to be added eventually
 * Not randomizing open edges, straight staircases, and ladders. Originally I forced it on to both keep things simpler for testing, and to not flood the YAML with options. Maybe this could be added, but also, if you want doors, you probably want maximum doors (within reason)
