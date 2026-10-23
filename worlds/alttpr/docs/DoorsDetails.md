@@ -14,7 +14,7 @@ Doors connecting two supertiles that Link can walk through. Fully randomized.
 Doors that connect two rooms within the same supertile. They always connect to the same room as vanilla, but their type (small key locked, bombable, etc.) is fully randomized.
 
 ### Straight Stairs
-Doors with a staircase leading straight up or down. These connect to a random room, but are always open.
+Doors with a staircase leading straight up or down. These connect to a random room, but they and the door they connect to are always open.
 
 ### Hole
 A dropdown to another room. Never randomized. Both rooms are always in the same dungeon, which might not be vanilla.
@@ -23,19 +23,19 @@ A dropdown to another room. Never randomized. Both rooms are always in the same 
 Warp tiles. Never randomized. Both rooms are always in the same dungeon, which might not be vanilla.
 
 ### Trap (Openable)
-Impassible doors which can be opened by killing all the enemies, pressing a switch, or some other condition. Can connect to a random room, if they are on the edge of a supertile, but they are always a openable trap door. The other side of the trap door can be randomized.
+Impassible doors which can be opened by killing all the enemies, pressing a switch, or some other condition. Can connect to a random room, if they are on the edge of a supertile, but they are always a openable trap door. The other side of the trap door is always open.
 
 ### Trap (One-way)
-Can only be traversed in one direction, such as Skull pinball room west or the Sewers leading back to Hyrule Castle. These are only randomized depending on the door_type_shuffle setting. If randomized, every room of the dungeon will be accessible, although dead ends are allowed.
+Can only be traversed in one direction, such as Skull pinball room west or the Sewers leading back to Hyrule Castle. These are only randomized depending on the door_type_shuffle setting. If randomized, every room of the dungeon will be accessible, although dead ends are allowed. If a one-way trap is placed in the same room as an openable trap, both traps are treated as openable. The opposite side of a randomized trap door is always open.
 
 ### Spiral Stairs
 Doors with a spiral staircase. Can only connect to other spiral staircases, and will always be either open or small key locked. Only spiral stairs that are key locked in vanilla can be key locked in door shuffle; this can lead to one side of a staircase being key locked while the other side is open.
 
 ### Ladder
-Staircases in the middle of the room, such as the one leading to PoD basement, or right after GT torches on the climb. These connect to a random room, and are always open.
+Staircases in the middle of the room, such as the one leading to PoD basement, or right after GT torches on the climb. These connect to a random room, and both sides are always open.
 
 ### Open
-Open edges, like every exit from the Desert Palace lobby. These connect to a random room in the direction you'd expect, and are always open.
+Open edges, like every exit from the Desert Palace lobby. These connect to a random room in the direction you'd expect, and both sides are always open.
 
 ### Logical
 Not a real door, but included for logic, e.g. Hyrule Castle Cellblock Door. Never randomized.
